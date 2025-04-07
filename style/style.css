@@ -1,0 +1,928 @@
+/* start global setting */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+/* end global setting */
+header {
+  background-color: #fff;
+  box-shadow: 0px 10px 10px #a7a7a733;
+  width: 100%;
+}
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5px 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo h1 {
+  color: #054c73;
+  font-size: 34px;
+  font-family: "Cairo", sans-serif;
+}
+.logoA {
+  text-decoration: none;
+  margin-right: 50px;
+}
+.toggler {
+  display: none;
+}
+.header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 0px 25px;
+}
+.header nav a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
+}
+.header nav a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #054c73;
+  transform: rotateY(90deg);
+  transition: 0.3s;
+}
+.header nav a:hover::after {
+  transform: rotateY(0deg);
+}
+.frist {
+  width: 100%;
+  max-height: 800px;
+  background-color: #f0f0f0;
+}
+.fristContent {
+  padding-top: 350px;
+  background-image: url(../imgs/bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.card {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #dfe9f4;
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  padding: 25px 5px 25px 25px;
+  display: flex;
+  align-items: center;
+}
+.card-text-content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+.card-text-content h1 {
+  color: #054c73;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Cairo", sans-serif;
+}
+.card-text-content .card-title {
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
+}
+.card-text-content .card-describtion {
+  font-family: "Cairo", sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+}
+.services {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f2f5ff;
+  padding: 30px 0px;
+}
+.service {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.service p {
+  font-size: 19px;
+  font-family: "Cairo", sans-serif;
+}
+.service span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.service span img {
+  width: 100%;
+  height: 100%;
+}
+.collection {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.title {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 25px;
+  font-family: "Cairo", sans-serif;
+}
+.titleSpan {
+  display: block;
+  width: 100%;
+  height: 45px;
+}
+.title p {
+  color: #666666;
+  padding: 0px 15px;
+}
+.title p br {
+  display: none;
+}
+.imgsCollection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.imgsCollection .img1 {
+  width: 350px;
+  height: 450px;
+  border-radius: 50px 0 0 0;
+  overflow: hidden;
+}
+.imgsCollection .img1 img {
+  width: 100%;
+  height: 100%;
+}
+.imgsCollection .img2 {
+  width: 350px;
+  height: 450px;
+  border-radius: 0px 0 0 0;
+  overflow: hidden;
+  margin-top: -30px;
+}
+.imgsCollection .img2 img {
+  width: 100%;
+  height: 100%;
+}
+.imgsCollection .img3 {
+  width: 350px;
+  height: 450px;
+  border-radius: 0 0 50px 0;
+  overflow: hidden;
+}
+.imgsCollection .img3 img {
+  width: 100%;
+  height: 100%;
+}
+.products-section {
+  width: 100%;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+}
+.products-div {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+}
+.box-title h1 {
+  font-weight: 400;
+  color: #222;
+  padding-bottom: 25px;
+  margin-top: -25px;
+  font-family: "Cairo", sans-serif;
+  text-align: right;
+}
+.products-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.product {
+  width: 350px;
+  height: 400px;
+  background-color: #eee;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+  box-shadow: 0 3px 5px 0px #00000091;
+  margin: 15px;
+}
+.massage {
+  text-align: center;
+  z-index: 5000;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 100%;
+  color: rgb(255, 174, 0);
+  display: none;
+}
+.product .img {
+  width: 100%;
+  height: 75%;
+}
+.product .img img {
+  width: 100%;
+  height: 100%;
+}
+.product .textInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 5px 0px 15px;
+}
+.product .textInfo .product-title {
+  font-size: 26px;
+  padding-top: 15px;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+.product .textInfo .product-price {
+  text-align: left;
+  padding-top: 15px;
+  font-size: 26px;
+  color: #333;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+.product::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #0000009d;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.product:hover {
+  transform: translateY(-10px);
+}
+.product:hover .massage {
+  display: inline;
+}
+.product:hover::after {
+  display: inline;
+}
+.final {
+  width: 100%;
+}
+.commCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+.commCard {
+  width: 40%;
+  padding: 15px 15px 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 5px 5px 20px #00000066;
+}
+.commCard h1 {
+  text-align: center;
+  color: #111;
+}
+.commCard h2 {
+  color: #4a90e2;
+  font-size: 30px;
+  padding: 20px 0px 30px 0px;
+}
+.commCard span {
+  width: fit-content;
+  background-color: #a3d5ff;
+  border-radius: 5px;
+  color: #003366;
+  font-size: 16px;
+  padding: 5px 25px;
+  font-family: "Cairo", sans-serif;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.commCard span:hover {
+  background-color: #67a5d8;
+  color: #fff;
+}
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #003366;
+  border-radius: 10px 10px 0 0;
+}
+.footer {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.footer p {
+  color: #d9d9d9f3;
+}
+.footer p a {
+  width: fit-content;
+  padding: 2px 4px;
+  text-decoration: none;
+  color: #eee;
+  margin: 0px 5px;
+  transition: 0.2s;
+}
+.footer p a:hover {
+  box-shadow: 1px 2px 3px #00000066;
+}
+
+/* Start Responsive code */
+
+/* small screen */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    margin: 0px auto;
+  }
+}
+/* medium screen */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 970px;
+    margin: 0px auto;
+  }
+}
+/* small screen */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0px auto;
+  }
+}
+
+/* End Responsive code */
+
+/* my responsive code */
+
+@media screen and (max-width: 1200px) {
+  .imgsCollection .img1 {
+    width: 280px;
+    height: 380px;
+    border-radius: 50px 0 0 0;
+  }
+  .imgsCollection .img2 {
+    width: 280px;
+    height: 380px;
+    border-radius: 0px 0 0 0;
+  }
+  .imgsCollection .img3 {
+    width: 280px;
+    height: 380px;
+    border-radius: 0 0 50px 0;
+  }
+  .products-box {
+    justify-content: center;
+  }
+  .product {
+    width: 400px;
+    height: 440px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    flex-direction: row;
+  }
+  .header nav {
+    flex-direction: column-reverse;
+    justify-content: start;
+    background-color: #043873;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999999999999999;
+    gap: 100px;
+    padding-top: 200px;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+  }
+  .header nav a {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+  }
+  .header nav a::after {
+    transform: rotateY(0deg);
+  }
+  .toggler {
+    width: 40px;
+    height: auto;
+    padding: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+  }
+  .toggler span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 5px;
+    background-color: #000000;
+  }
+  .closer {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .closer .four {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: auto 0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+  }
+  .closer .five {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: auto 0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+  .opened {
+    transform: translatex(0%) !important;
+  }
+  .fristContent .card {
+    top: 30%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  .imgsCollection .img2 {
+    display: none;
+  }
+  .product {
+    width: 320px;
+    height: 410px;
+  }
+  .commCards {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .commCard {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .title p br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: 450px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .service p {
+    font-size: 16px;
+  }
+  .service span {
+    width: 32px;
+    height: 32px;
+  }
+  .fristContent .card {
+    padding: 0px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 550px;
+    height: 400px;
+    background-color: #dfe9f483;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .fristContent .card .blur {
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .card-text-content {
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .title p br {
+    display: none;
+  }
+  .title p {
+    padding: 0px 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fristContent .card {
+    width: 500px;
+    height: 350px;
+  }
+  .collection {
+    height: auto;
+  }
+  .imgsCollection {
+    gap: 50px;
+  }
+  .imgsCollection .img1 {
+    width: 400px;
+    height: 550px;
+    border-radius: 50px 0 0 0;
+    overflow: hidden;
+  }
+  .imgsCollection .img2 {
+    width: 400px;
+    height: 550px;
+    border-radius: 0px 0 0 0;
+    overflow: hidden;
+    margin-top: 0px;
+    display: block;
+  }
+  .imgsCollection .img3 {
+    width: 400px;
+    height: 550px;
+    border-radius: 0 0 50px 0;
+    overflow: hidden;
+  }
+  .header nav {
+    padding-top: 200px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .footer p,
+  a {
+    font-size: 14px;
+  }
+  .commCard h1,
+  .commCard h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .fristContent .card {
+    width: 450px;
+    height: 310px;
+  }
+  .fristContent {
+    height: 500px;
+  }
+  .service p {
+    font-size: 14px;
+  }
+  .service span {
+    width: 24px;
+    height: 24px;
+  }
+  .product {
+    width: 400px;
+    height: 500px;
+  }
+  .header nav {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 515px) {
+  .footer p,
+  a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .fristContent .card {
+    width: 420px;
+    height: 280px;
+  }
+  .fristContent {
+    height: 400px;
+  }
+  .footer p,
+  a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product {
+    width: 360px;
+    height: 440px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .footer p,
+  a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .product {
+    margin: 15px auto;
+  }
+  .fristContent .card {
+    width: 360px;
+    height: 240px;
+  }
+  .fristContent {
+    height: 330px;
+  }
+  .service p {
+    font-size: 13px;
+  }
+  .service span {
+    width: 20px;
+    height: 20px;
+  }
+  .imgsCollection .img1 {
+    width: 360px;
+    height: 480px;
+    border-radius: 50px 0 0 0;
+    overflow: hidden;
+  }
+  .imgsCollection .img2 {
+    width: 360px;
+    height: 480px;
+    border-radius: 0px 0 0 0;
+    overflow: hidden;
+    margin-top: 0px;
+    display: block;
+  }
+  .imgsCollection .img3 {
+    width: 360px;
+    height: 480px;
+    border-radius: 0 0 50px 0;
+    overflow: hidden;
+  }
+  .title p {
+    font-size: 14px;
+  }
+  .footer p,
+  a {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .product {
+    width: 320px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 405px) {
+  .footer p,
+  a {
+    font-size: 10px;
+  }
+  .title h1 {
+    font-size: 30px;
+  }
+  .title p {
+    font-size: 13px;
+  }
+  .imgsCollection .img1 {
+    width: 320px;
+    height: 440px;
+    border-radius: 50px 0 0 0;
+    overflow: hidden;
+  }
+  .imgsCollection .img2 {
+    width: 320px;
+    height: 440px;
+    border-radius: 0px 0 0 0;
+    overflow: hidden;
+    margin-top: 0px;
+    display: block;
+  }
+  .imgsCollection .img3 {
+    width: 320px;
+    height: 440px;
+    border-radius: 0 0 50px 0;
+    overflow: hidden;
+  }
+  .commCard h1,
+  .commCard h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .header nav {
+    width: 320px;
+    padding-top: 200px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .service p {
+    font-size: 12px;
+  }
+  .service span {
+    width: 16px;
+    height: 16px;
+  }
+  .fristContent .card {
+    width: 320px;
+    height: 240px;
+  }
+  .fristContent {
+    height: 300px;
+  }
+  .footer p,
+  a {
+    font-size: 10px;
+  }
+  .title h1 {
+    font-size: 28px;
+  }
+  .title p {
+    font-size: 13px;
+  }
+  .card-text-content h1 {
+    font-size: 35px;
+  }
+  .product {
+    width: 300px;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .footer p,
+  a {
+    font-size: 9px;
+  }
+}
+.unfocused {
+  opacity: 0;
+}
+.productFullScreenView {
+  position: fixed;
+  width: 1100px;
+  height: 650px;
+  background-color: #043873;
+  z-index: 99999999999999999999999999999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.1px solid #000000;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* transition: 5s; */
+  box-shadow: 0 10px 20px 0px #000000d8;
+}
+
+.detailes {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 425px;
+  margin-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 60px;
+  font-family: "Cairo", sans-serif;
+}
+.detailes .productWindowTitle {
+  padding-bottom: 0px;
+  text-align: center;
+}
+.detailes .productWindowTitle h2 {
+  color: #fff;
+  font-size: 30px;
+}
+.detailes .describtion {
+  width: 100%;
+  padding-right: 10px;
+  min-height: 25%;
+  max-height: 50%;
+  text-align: right;
+  align-items: center;
+  margin-top: 20px;
+}
+.detailes .describtion p {
+  color: #eee;
+}
+.detailes .price {
+  text-align: right;
+}
+.detailes .price h3 {
+  color: #043873;
+  max-width: fit-content;
+  padding: 5px 10px;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: auto;
+}
+.intro {
+  display: block;
+  margin: 0;
+  font-size: 20px !important;
+  color: #fff;
+  padding-bottom: 15px;
+  font-weight: 400;
+  margin-right: 25px;
+}
+.productCloser {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .productCloser {
+    width: 30px;
+    height: 30px;
+  }
+}
+.productCloser span:nth-child(1) {
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #eee;
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translatey(-50%) rotate(45deg);
+}
+.productCloser span:nth-child(2) {
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #eee;
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translatey(-50%) rotate(-45deg);
+}
+hr {
+  width: 260px;
+  padding: 0px;
+  margin: auto;
+  position: absolute;
+  margin: 35px 0 0 75px;
+}
+
+.inactive {
+  display: none;
+}

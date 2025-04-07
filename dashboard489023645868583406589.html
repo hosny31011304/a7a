@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/all.min.css" />
+    <link rel="stylesheet" href="style/normallize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/styles.css" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <h1 class="pageTitle">Dashboard</h1>
+    <div class="container">
+      <form action="upload_product.php" method="post" class="form" enctype="multipart/form-data">
+        <div class="branch">
+          <h2>القسم اللي المنتج هيظهر فية</h2>
+          <select name="branch">
+            <option value="fristBranch">باب و شباك</option>
+            <option value="secondBranch">موبيليا</option>
+            <option value="thirdBranch">إكسسوارات نجارة</option>
+            <option value="fourthBranch">سباكة</option>
+          </select>
+        </div>
+        <div class="title">
+          <h2>إسم المنتج</h2>
+          <input name="name" type="text" placeholder="إسم المنتج" required />
+        </div>
+        <div class="describtion">
+          <h2>وصف للمنتج</h2>
+          <textarea name="description" placeholder="وصف المنتج" required></textarea>
+        </div>
+        <div class="price">
+          <h2>سعر المنتج</h2>
+          <input name="price" type="number" placeholder="سعر المنتج" required />
+        </div>
+        <div class="imgs">
+          <h2>الصوره الأولي (الأساسية)</h2>
+          <input name="img1" type="file" required>
+          <h2>الصوره الثانية</h2>
+          <input name="img2" type="file" required>
+          <h2>الصوره الثالثة</h2>
+          <input name="img3" type="file" required>
+        </div>
+        <div class="add">
+          <input type="submit" value="إضافة" />
+        </div>
+      </form>
+    </div>
+    <h1 class="delTitle">حذف المنتجات</h1>
+    <div class="container">
+      <div class="products">
+        <table id="productsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>الإسم</th>
+              <th>القسم</th>
+              <th>الحدث</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      async function fetchProducts() {
+        try {
+          const response = await fetch('fetch_products.php');
+          const products = await response.json();
+          const tableBody = document.querySelector('#productsTable tbody');
+          tableBody.innerHTML = '';
+    
+          products.forEach((product, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${index + 1}</td>
+              <td>${product.name}</td>
+              <td>${product.Type}</td>
+              <td>
+                <button onclick="deleteProduct(${product.id})">
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+              </td>
+            `;
+            tableBody.appendChild(row);
+          });
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        }
+      }
+          async function deleteProduct(productId) {
+        if (confirm('هل أنت متأكد من حذف هذا المنتج؟')) {
+          try {
+            const response = await fetch('delete_product.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ id: productId }),
+            });
+    
+            const result = await response.json();
+            if (result.success) {
+              alert('تم حذف المنتج بنجاح');
+              fetchProducts();
+            } else {
+              alert('حدث خطأ أثناء حذف المنتج');
+            }
+          } catch (error) {
+            console.error('Error deleting product:', error);
+          }
+        }
+      }
+    
+      fetchProducts();
+    </script>
+    <script src="js/mains.js"></script>
+  </body>
+</html>

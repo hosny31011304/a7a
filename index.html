@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normallise css file -->
+    <link rel="stylesheet" href="style/normallize.css" />
+    <!-- page style -->
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- slider style (css file) -->
+    <link rel="stylesheet" href="style/slider.css" />
+    <!-- font awsome css file -->
+    <link rel="stylesheet" href="style/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- page icon -->
+    <link rel="icon" type="image/x-icon" href="" />
+    <title>Store name</title>
+  </head>
+  <body>
+    <!-- slider -->
+    <div class="productFullScreenView inactive">
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img class="img1" src="" />
+          </div>
+          <div class="item">
+            <img class="img2" src="" />
+          </div>
+          <div class="item">
+            <img class="img3" src="" />
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="prev">&lt;</button>
+          <button id="next">&gt;</button>
+        </div>
+
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="detailes">
+        <!-- title -->
+        <div class="productWindowTitle">
+          <!-- <h2 class="intro">
+            <span class="space" style="padding-left: 5px"></span> : الإٍسم
+          </h2> -->
+          <h2 class="productTitle"></h2>
+          <hr />
+        </div>
+        <!-- describtion -->
+        <div class="describtion">
+          <h2 class="intro">
+            <span class="space" style="padding-left: 5px"></span>: الوصف
+          </h2>
+          <p class="productDescribtion"></p>
+          <hr />
+        </div>
+        <!-- price -->
+        <div class="price">
+          <h2 class="intro">
+            <span class="space" style="padding-left: 5px"></span>: السعر
+          </h2>
+          <h3 class="productPrice"></h3>
+        </div>
+      </div>
+      <div class="productCloser">
+        <span class="one"></span>
+        <span class="two"></span>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="header">
+          <a href="index.html" class="logoA">
+            <div class="logo">
+              <h1>خطاب</h1>
+            </div>
+          </a>
+          <div class="toggler" id="openNav">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </div>
+          <nav id="nav">
+            <div class="closer">
+              <span class="four"></span>
+              <span class="five"></span>
+            </div>
+            <a href="#communication">التواصل</a>
+            <a href="#products">المنتجات</a>
+            <a href="#home">البداية</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="frist" id="home">
+      <div class="container">
+        <div class="fristContent">
+          <div class="card">
+            <div class="blur"></div>
+            <div class="card-text-content">
+              <p class="card-title">خطاب</p>
+              <h1>مرحبا بالجميع</h1>
+              <p class="card-describtion">
+                هنا الموقع الرسمي الوحيد لنا علي الإنترنت , لأي إستفسار يرجي
+                الذهاب الي وسائل التواصل في الأسفل
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="services">
+          <div class="service">
+            <p>خدمة توصيل</p>
+            <span><img src="imgs/delivery.png" /></span>
+          </div>
+
+          <div class="service">
+            <p>دعم 24/7</p>
+            <span><img src="imgs/support-icon.png" /></span>
+          </div>
+
+          <div class="service">
+            <p>100% أمان</p>
+            <span><img src="imgs/trust.png" /></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="collection">
+      <div class="container">
+        <div class="title">
+          <h1>لمسة من الأناقة</h1>
+          <p>
+            اكتشف تشكيلة مختارة بعناية من قطع الأثاث التي تجمع بين البساطة
+            والأناقة لتمنح <br />منزلك لمسة فريدة من الجمال والراحة.
+          </p>
+          <span class="titleSpan"></span>
+        </div>
+        <div class="imgsCollection">
+          <div class="img1">
+            <img src="imgs/collection-img-1.png" />
+          </div>
+          <div class="img2">
+            <img src="imgs/collection-img-2.png" />
+          </div>
+          <div class="img3">
+            <img src="imgs/collection-img-3.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="products-section">
+      <div class="container">
+        <div class="products">
+          <div class="title" id="products">
+            <h1>المنتجات</h1>
+          </div>
+
+          <div class="products-div">
+            <div class="box-title">
+              <h1>باب و شباك</h1>
+            </div>
+            <div class="products-box fristBranch"></div>
+          </div>
+
+          <div class="products-div">
+            <div class="box-title">
+              <h1>موبيليا</h1>
+            </div>
+            <div class="products-box secondBranch"></div>
+          </div>
+
+          <div class="products-div">
+            <div class="box-title">
+              <h1>إكسسوارات نجارة</h1>
+            </div>
+            <div class="products-box thirdBranch"></div>
+          </div>
+
+          <div class="products-div">
+            <div class="box-title">
+              <h1>سباكة</h1>
+            </div>
+            <div class="products-box fourthBranch"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="final" id="communication">
+      <div class="container">
+        <div class="comunication" id="services">
+          <div class="title">
+            <h1>وسائل التواصل</h1>
+          </div>
+          <div class="commCards">
+            <div class="commCard">
+              <h1>Whats-App Number</h1>
+              <h2>01000000000</h2>
+              <span>إبدأ</span>
+            </div>
+            <div class="commCard">
+              <h1>Email Address</h1>
+              <h2>*******@gmail.com</h2>
+              <span>إبدأ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <p>
+          &lt;Developed By&gt;<a
+            href="https://www.facebook.com/share/1DhuxokUqy/" target="_blank"
+            >Omar
+          </a>
+          &
+          <a
+            href="https://www.facebook.com/share/16BpaXRVe5/" target="_blank"
+            >Omar
+          </a>
+        </p>
+
+        <p>&lt;All Copy Rights® Reserved @2024 &gt;</p>
+      </div>
+    </footer>
+
+    <!-- java-script main.js file -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
